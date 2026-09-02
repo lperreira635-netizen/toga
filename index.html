@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#12213f" />
+<title>Toga</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<link rel="manifest" href="manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Toga" />
+<meta name="description" content="Aprende derecho colombiano a tu ritmo: 185 capítulos originales en 4 niveles, de lo básico a la carrera de abogado. Con glosario, quiz y certificados." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Toga" />
+<meta property="og:title" content="Toga" />
+<meta property="og:description" content="Aprende derecho colombiano a tu ritmo: 185 capítulos originales en 4 niveles, de lo básico a la carrera de abogado." />
+<!-- Reemplaza esta URL por la de tu propio dominio una vez publiques la app -->
+<meta property="og:url" content="https://TU-DOMINIO.com" />
+<meta property="og:image" content="https://TU-DOMINIO.com/icon.svg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Toga" />
+<meta name="twitter:description" content="Aprende derecho colombiano a tu ritmo: 185 capítulos originales en 4 niveles." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<!-- Anuncios recompensados (desbloqueo gratis por capítulo): reemplaza TU-ADSENSE-CLIENT-ID
+     por tu ca-pub-XXXXXXXXXXXXXXXX real de Google AdSense una vez tengas la cuenta aprobada.
+     Mientras tanto, la app funciona igual en "modo de prueba" (ver ANTES-DE-LANZAR.md). -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=TU-ADSENSE-CLIENT-ID" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Toga",
+  "description": "Aprende derecho colombiano a tu ritmo: capítulos originales en 4 niveles, de lo básico a la carrera de abogado, con glosario, quiz y certificados.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Toga"
+  },
+  "inLanguage": "es-CO",
+  "courseMode": "online",
+  "isAccessibleForFree": true,
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online"
+  }
+}
+</script>
+</head>
+<body>
+  <div class="app" id="app">
+
+    <header class="topbar" id="topbar">
+      <button class="icon-btn" id="backBtn" aria-label="Volver" hidden>←</button>
+      <h1 class="topbar-title" id="topbarTitle">Toga</h1>
+      <span class="topbar-spacer"></span>
+    </header>
+
+    <main class="screen" id="screen" tabindex="-1"></main>
+
+    <nav class="bottom-nav" id="bottomNav">
+      <button class="nav-item" data-route="inicio" aria-label="Inicio">
+        <span class="nav-icon">🏠</span><span class="nav-label">Inicio</span>
+      </button>
+      <button class="nav-item" data-route="glosario" aria-label="Glosario">
+        <span class="nav-icon">📗</span><span class="nav-label">Glosario</span>
+      </button>
+      <button class="nav-item" data-route="recursos" aria-label="Recursos">
+        <span class="nav-icon">🔗</span><span class="nav-label">Recursos</span>
+      </button>
+      <button class="nav-item" data-route="acerca" aria-label="Acerca de">
+        <span class="nav-icon">ℹ️</span><span class="nav-label">Acerca de</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="learn.js"></script>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
